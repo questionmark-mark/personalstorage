@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Storage</title>
+  <style>
+    body {
+      background-color: #f4dcfd;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .nav {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: #e3b2f5;
+    }
+    .nav button {
+      padding: 0.5rem 1rem;
+      background-color: #9b59b6;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .content {
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <button onclick="showSection('write')">글쓰기</button>
+    <button onclick="showSection('view')">내 글 보기</button>
+    <button onclick="showSection('chat')">잡담방</button>
+    <button onclick="showSection('search')">검색</button>
+    <button onclick="showSection('login')">로그인</button>
+  </div>
+  <div class="content" id="content">기본 콘텐츠</div>
+  <script>
+    function showSection(section) {
+      document.getElementById('content').innerHTML = section + ' 섹션 불러오는 중...';
+    }
+  </script>
+</body>
+</html>
